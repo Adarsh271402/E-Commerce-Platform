@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
-const nextConfig: NextConfig = {
-  distDir: process.env.NETLIFY ? ".next-netlify" : ".next",
+const nextConfig = (phase: string): NextConfig => ({
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next" : ".next-netlify",
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
-};
+});
 
 export default nextConfig;
