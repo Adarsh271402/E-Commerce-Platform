@@ -8,7 +8,7 @@ const globalForPrisma = globalThis as unknown as {
 export const db =
   globalForPrisma.prisma ??
   new PrismaClient({
-    datasourceUrl: process.env.NETLIFY
+    datasourceUrl: (process.env.NETLIFY || process.env.NETLIFY_DB_URL || process.env.AWS_LAMBDA_FUNCTION_NAME)
       ? getConnectionString()
       : process.env.DATABASE_URL,
     log: process.env.NODE_ENV === 'development' ? ['query'] : ['error'],

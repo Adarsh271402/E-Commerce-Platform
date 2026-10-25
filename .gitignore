@@ -1,5 +1,6 @@
 node_modules/
 .next/
+.next-netlify/
 out/
 .env
 .env.*

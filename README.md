@@ -21,6 +21,8 @@ Local environment files, database files, dependencies, and build outputs are exc
 
 Netlify uses `netlify.toml` and `npm run build:netlify`. This generates a PostgreSQL Prisma client from `prisma/schema.production.prisma`. Local development continues to use SQLite and `prisma/schema.prisma`; run `npm run db:generate` after switching back from a production build.
 
+The Netlify build uses Webpack and a separate `.next-netlify` output directory to avoid Windows symlink and development-server file-lock conflicts. The production Prisma client includes the Linux engine required by Netlify Functions.
+
 `@netlify/database` provisions persistent PostgreSQL storage. Committed migrations under `netlify/database/migrations/` create the schema and initial public catalog during deployment. Local users, passwords, sessions, and orders are not uploaded. Create your own account on the live site.
 
 Keep both Prisma schemas in sync when changing models. Database credentials are managed by Netlify and must not be committed.
