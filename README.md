@@ -1,5 +1,7 @@
 # ENCETT E-Commerce Platform
 
+**Live website:** [encett-ecommerce.netlify.app](https://encett-ecommerce.netlify.app/)
+
 An e-commerce application built with Next.js, React, Tailwind CSS, Prisma, and SQLite. Includes a product catalog, user authentication, and order APIs.
 
 ## Run locally
