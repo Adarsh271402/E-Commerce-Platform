@@ -1,8 +1,36 @@
 # ENCETT E-Commerce Platform
 
-**Live website:** [encett-ecommerce.netlify.app](https://encett-ecommerce.netlify.app/)
+A leather-goods storefront with a product catalog, user authentication and order APIs.
 
-An e-commerce application built with Next.js, React, Tailwind CSS, Prisma, and SQLite. Includes a product catalog, user authentication, and order APIs.
+**[Open live demo](https://encett-ecommerce.netlify.app/)** · [Features](#features) · [Run locally](#run-locally)
+
+**Next.js · React · TypeScript · Tailwind CSS · Prisma**
+
+## Preview
+
+![ENCETT storefront homepage and leather bag collection](docs/images/preview.png)
+
+*Captured from the live application on 30 October 2026.*
+
+## Features
+
+- A product catalog presented through a responsive storefront.
+- Account registration and sign-in.
+- Order APIs and an orders interface.
+- Prisma data access with SQLite for local development and PostgreSQL for Netlify deployment.
+
+An admin role exists in the data model; an admin dashboard has not been implemented.
+
+## Architecture
+
+| Layer | Technology |
+| --- | --- |
+| Application | Next.js and React |
+| Language & styling | TypeScript and Tailwind CSS |
+| Database access | Prisma |
+| Local database | SQLite |
+| Hosted database | PostgreSQL through Netlify Database |
+| Hosting | Netlify |
 
 ## Run locally
 
